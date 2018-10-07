@@ -6,7 +6,7 @@
 	"scripts": {},
 	"repository": {
 		"type": "git",
-		"url": "https://pxoink@bitbucket.org/pxoink/pleiades-stream-site.git"
+		"url": "git clone https://bitbucket.org/glpa_av/live.glpa.org.git"
 	},
 	"author": "PxO Ink LLC",
 	"private": true,
