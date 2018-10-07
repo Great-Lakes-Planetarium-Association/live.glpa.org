@@ -282,15 +282,6 @@
 					<?php include_once(__DIR__ . '/schedule.php'); ?>
 				</main>
 				<aside class="column small-12 medium-4">
-					<div id="chat">
-						<h2>Live Chat</h2>
-						<div class="responsive-embed">
-							<iframe width="200" height="400" scrolling="no" frameborder="0"
-								src="<?php print(_vc($state, 'data', 'chat')); ?>"></iframe>
-						</div>
-						<span class="launch-live-chat button" data-hide="false">Launch Live Chat Applet</span>
-					</div>
-					<hr />
 					<div id="twitter-widget" data-widget="<?php print(_vc($state, 'data', 'twitter', 'id')); ?>"></div>
 				</aside>
 			</section>
