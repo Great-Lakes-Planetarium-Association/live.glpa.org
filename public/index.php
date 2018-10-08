@@ -68,7 +68,7 @@
 		</header>
 		<section>
 			<section class="row">
-				<main class="column small-12 medium-8">
+				<main class="column small-12 medium-12">
 				<?php if (_vc($state, 'data', 'announcement')) { ?>
 					<div class="callout alert">
 						<?php print(_vc($state, 'data', 'announcement')); ?>
