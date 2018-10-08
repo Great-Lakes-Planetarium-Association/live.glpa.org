@@ -1,5 +1,5 @@
 {
-	"name": "pleiades-stream",
+	"name": "glpa-stream",
 	"version": "0.4.4",
 	"description": "Foundation based SPA.",
 	"main": "index.js",
