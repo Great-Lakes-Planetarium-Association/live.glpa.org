@@ -281,9 +281,6 @@
 					<hr />
 					<?php include_once(__DIR__ . '/schedule.php'); ?>
 				</main>
-				<aside class="column small-12 medium-4">
-					<div id="twitter-widget" data-widget="<?php print(_vc($state, 'data', 'twitter', 'id')); ?>"></div>
-				</aside>
 			</section>
 		</section>
 		<footer class="text-center">
