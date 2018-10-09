@@ -283,7 +283,7 @@
 				</main>
 				<aside class="column small-12 medium-4">
 					<div id="twitter-widget">
-						<a class="twitter-timeline" data-height="500" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/ssumichrast/timelines/1049107901023965184?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<a class="twitter-timeline" data-height="800" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/ssumichrast/timelines/1049107901023965184?ref_src=twsrc%5Etfw">GLPA 2018 - Curated tweets by ssumichrast</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 				</aside>
 			</section>
