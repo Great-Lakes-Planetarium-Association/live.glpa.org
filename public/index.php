@@ -284,7 +284,7 @@
 			</section>
 		</section>
 		<footer class="text-center">
-			<p>Copyright &copy; <?php print(date('Y')); ?> GLPA. All Rights Reserved.</p>
+			<p>&copy; <?php print(date('Y')); ?> &mdash; Great Lakes Planetarium Association</p>
 		</footer>
 		<script type="text/javascript" src="js/modernizr.js"></script>
 		<script type="text/javascript" src="js/jquery.js"></script>
