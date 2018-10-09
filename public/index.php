@@ -68,7 +68,7 @@
 		</header>
 		<section>
 			<section class="row">
-				<main class="column small-12 medium-12">
+				<main class="column small-12 medium-8">
 				<?php if (_vc($state, 'data', 'announcement')) { ?>
 					<div class="callout alert">
 						<?php print(_vc($state, 'data', 'announcement')); ?>
@@ -282,7 +282,10 @@
 					<?php include_once(__DIR__ . '/schedule.php'); ?>
 				</main>
 				<aside class="column small-12 medium-4">
-					<div id="twitter-widget" data-widget="<?php print(_vc($state, 'data', 'twitter', 'id')); ?>"></div>
+					<div id="twitter-widget">
+						<a class="twitter-grid" data-partner="tweetdeck" href="https://twitter.com/ssumichrast/timelines/1049107901023965184?ref_src=twsrc%5Etfw">GLPA - Live Stream Page</a>
+						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><
+					/div>
 				</aside>
 			</section>
 		</section>
