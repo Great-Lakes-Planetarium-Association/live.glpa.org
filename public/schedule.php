@@ -14,7 +14,7 @@
 					<div id="schedule" class="row">
 						<div class="column small-12 medium-3">
 							<h2>Schedule</h2>
-							<h3>For the year <?php print(date('Y', $activeTimestamp)); ?>:</h3>
+							<h3>For the year <?php print(date('Y', strtotime($eventDays[0]->date))); ?>:</h3>
 							<ul class="vertical tabs" data-tabs id="schedule-content">
 							<?php foreach($eventDays as $k => $day) { ?>
 								<li class="tabs-title<?php if ($k === $active['day']) { ?> is-active<?php } ?>">
