@@ -283,9 +283,8 @@
 				</main>
 				<aside class="column small-12 medium-4">
 					<div id="twitter-widget">
-						<a class="twitter-grid" data-partner="tweetdeck" href="https://twitter.com/ssumichrast/timelines/1049107901023965184?ref_src=twsrc%5Etfw">GLPA - Live Stream Page</a>
-						<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><
-					/div>
+						<a class="twitter-timeline" data-height="500" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/ssumichrast/timelines/1049107901023965184?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					</div>
 				</aside>
 			</section>
 		</section>
