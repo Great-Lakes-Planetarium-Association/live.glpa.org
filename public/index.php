@@ -283,8 +283,8 @@
 				</main>
 				<aside class="column small-12 medium-4">
 					<div id="twitter-widget">
-						<strong>Share your tweets and pictures!<br />Use the hashtag <a href="https://twitter.com/search?q=%23glpa2018">#glpa2018</a>!</strong>
-						<a class="twitter-timeline" data-width="350" data-height="800" data-chrome="noheader nofooter transparent" data-dnt="true" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/ssumichrast/timelines/1049107901023965184?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<strong>Share your tweets and pictures!<br />Use the hashtag <a href="https://twitter.com/search?q=<?php print(urlencode(_vc($state, 'data', 'twitter', 'hashtag'))); ?>"><?php print(_vc($state, 'data', 'twitter', 'hashtag')); ?></a>!</strong>
+						<a class="twitter-timeline" data-width="350" data-height="800" data-chrome="noheader nofooter transparent" data-dnt="true" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/<?php print(_vc($state, 'data', 'twitter', 'account')); ?>/timelines/<?php print(_vc($state, 'data', 'twitter', 'id')); ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 				</aside>
 			</section>
