@@ -284,21 +284,15 @@
 					<?php include_once(__DIR__ . '/schedule.php'); ?>
 				</main>
 				<aside class="column small-12 medium-4">
-					<div id="chat">
-						<h2>Live Chat</h2>
-						<div class="responsive-embed">
-							<iframe width="200" height="400" scrolling="no" frameborder="0"
-								src="<?php print(_vc($state, 'data', 'chat')); ?>"></iframe>
-						</div>
-						<span class="launch-live-chat button" data-hide="false">Launch Live Chat Applet</span>
+					<div id="twitter-widget">
+					<strong>Share your tweets and pictures!<br />Use the hashtag <a href="https://twitter.com/search?q=<?php print(urlencode(_vc($state, 'data', 'twitter', 'hashtag'))); ?>"><?php print(_vc($state, 'data', 'twitter', 'hashtag')); ?></a>!</strong>
+						<a class="twitter-timeline" data-width="350" data-height="800" data-chrome="noheader nofooter transparent" data-dnt="true" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/<?php print(_vc($state, 'data', 'twitter', 'account')); ?>/timelines/<?php print(_vc($state, 'data', 'twitter', 'id')); ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
-					<hr />
-					<div id="twitter-widget" data-widget="<?php print(_vc($state, 'data', 'twitter', 'id')); ?>"></div>
 				</aside>
 			</section>
 		</section>
 		<footer class="text-center">
-			<p>Copyright &copy; <?php print(date('Y')); ?> GLPA. All Rights Reserved.</p>
+			<p>&copy; <?php print(date('Y')); ?> &mdash; Great Lakes Planetarium Association</p>
 		</footer>
 		<script type="text/javascript" src="js/modernizr.js"></script>
 		<script type="text/javascript" src="js/jquery.js"></script>
