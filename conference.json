@@ -1,0 +1,403 @@
+{
+  "conference": "2019 GLPA Conference",
+  "location": "Toledo, OH",
+  "host": "Ritter Planetarium",
+  "background": "https://live.glpa.org/ritter.jpg",
+  "logo": "https://glpa.org/local/glpa.png",
+  "timezone": "America/New_York",
+  "google_analytics": "",
+  "announcement": "",
+  "twitter": {
+    "account": "glpasocial",
+    "id": "1186853713127890946",
+    "params": {
+      "dnt": "true",
+      "aria-polite": "assertive"
+    },
+    "hashtag": "#glpa2019"
+  },
+  "facebook": {
+    "account": "glpasocial"
+  },
+  "chat": "",
+  "stream_url_prefixes": {
+    "hls":     "http://live.glpa.org/hls/",
+    "rtmp":    "rtmp://live.glpa.org/",
+    "youtube": "https://www.youtube.com/embed/",
+    "audio":   "http://live.glpa.org:8000/",
+    "ustream": "http://www.ustream.tv/embed/"
+  },
+  "stream_url_suffixes": {
+    "youtube": "?autoplay=1&playsinline=1&rel=0",
+    "ustream": "?html5ui"
+  },
+  "streams": [
+    {
+      "hls":     { "url": "live1.m3u8", "enabled": true },
+      "rtmp":    { "url": "live1/live", "enabled": true },
+      "youtube": { "url": "cTH98PmLfbY", "enabled": true },
+      "audio":   { "url": "live.mp3", "enabled": true },
+      "ustream": { "url": "16165896", "enabled": true }
+    },
+    {
+      "hls":     { "url": "live2.m3u8", "enabled": true },
+      "rtmp":    { "url": "live2/live", "enabled": true },
+      "youtube": { "url": "mSijYxcofFs", "enabled": true },
+      "audio":   { "url": "live2.mp3", "enabled": true }
+    },
+    {
+      "hls":     { "url": "live3.m3u8", "enabled": true },
+      "rtmp":    { "url": "live3/live", "enabled": true },
+      "youtube": { "url": "SI6vksBrguw", "enabled": true },
+      "audio":   { "url": "live3.mp3", "enabled": true }
+    }
+  ],
+  "event_days": [
+    {
+      "date": "2019-10-23",
+      "events": [
+        {
+          "start_time": "18:00",
+          "end_time": "19:30",
+          "title": "Welcome Reception"
+        }
+      ]
+    },
+    {
+      "date": "2019-10-24",
+      "events": [
+        {
+          "start_time": "13:35",
+          "end_time": "14:35",
+          "title": "Concurrent Paper Session #1",
+          "children": [
+            {
+              "start_time": "13:35",
+              "end_time": "13:50",
+              "concurrent_streams": [
+                {
+                  "title": "Appealing to Younger Audiences at Your Planetarium",
+                  "presenter": "G. Phillips & E. Huncik",
+                  "stream": 0
+                },
+                {
+                  "title": "Risk It!",
+                  "presenter": "S. Button",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "13:50",
+              "end_time": "14:05",
+              "concurrent_streams": [
+                {
+                  "title": "Read Under the Stars",
+                  "presenter": "P. Epstein",
+                  "stream": 0
+                },
+                {
+                  "title": "Extra, Simple, Significant Revenue Streams",
+                  "presenter": "C. Janssen",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:05",
+              "end_time": "14:20",
+              "concurrent_streams": [
+                {
+                  "title": "Beyond the Mobile Science Theater with INTSENSE 2.0: Engaging the Students of Berlin with Begabungförderung",
+                  "presenter": "A. Green",
+                  "stream": 0
+                },
+                {
+                  "title": "Implementing the open source astronomy software OpenSpace for planetarium and floor programs",
+                  "presenter": "D. Tell, M. Holt",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:20",
+              "end_time": "14:35",
+              "concurrent_streams": [
+                {
+                  "title": "Solar System Explorers - A show series to keep them coming back!",
+                  "presenter": "S. Schultz",
+                  "stream": 0
+                },
+                {
+                  "title": "Visualization design in the planetarium: Moving away from the binary notion of standards",
+                  "presenter": "J. Aguilera",
+                  "stream": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "14:35",
+          "end_time": "15:45",
+          "title": "Invited Speaker",
+          "children": [
+            {
+              "start_time": "14:35",
+              "end_time": "15:45",
+              "concurrent_streams": [
+                {
+                  "title": "The Making of a Mission",
+                  "presenter": "Dr. Robert C. Dempsey",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+	}
+      ]
+    },
+    {
+      "date": "2019-10-25",
+      "events": [
+        {
+          "start_time": "8:00",
+          "end_time": "9:00",
+          "title": "Invited Speaker",
+          "children": [
+            {
+              "start_time": "8:00",
+              "end_time": "9:00",
+              "concurrent_streams": [
+                {
+                  "title": "Inclusion and Diversity in Education",
+                  "presenter": "Dr. Jessica Garcia",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "13:15",
+          "end_time": "15:00",
+          "title": "Concurrent Paper Session #2",
+          "children": [
+            {
+              "start_time": "13:15",
+              "end_time": "13:30",
+              "concurrent_streams": [
+                {
+                  "title": "Deep Space: An Astronomy Education Course for Adults",
+                  "presenter": "B. Bonadurer",
+                  "stream": 0
+                },
+                {
+                  "title": "You, Too, Can Have a Dark Sky Park Near You!",
+                  "presenter": "D. Leake",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "13:30",
+              "end_time": "13:45",
+              "concurrent_streams": [
+                {
+                  "title": "Apollo 50 celebration: beyond nostalgia",
+                  "presenter": "J. Creighton",
+                  "stream": 0
+                },
+                {
+                  "title": "The Shultz, Jr. Planetarium Projector – a neglected piece of planetarium history",
+                  "presenter": "K. Wilson",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "13:45",
+              "end_time": "14:00",
+              "concurrent_streams": [
+                {
+                  "title": "Going Beyond the Stars in the Planetarium",
+                  "presenter": "N. Adhikari & H. Hale",
+                  "stream": 0
+                },
+                {
+                  "title": "The Future of Diversity and Inclusion in the Planetarium World and Why it is Important",
+                  "presenter": "P. Epstein",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:00",
+              "end_time": "14:15",
+              "concurrent_streams": [
+                {
+                  "title": "Getting a Feel for Lunar Craters: Apollo 50th Commemorative Edition",
+                  "presenter": "D. Hurd, K. Quinn",
+                  "stream": 0
+                },
+                {
+                  "title": "Exploring the Use of Formative Assessment in the Interactive Planetarium",
+                  "presenter": "S. Schultz",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:15",
+              "end_time": "14:30",
+              "concurrent_streams": [
+                {
+                  "title": "Big Astronomy Project: (Nearly) Free Show and Great Resources!",
+                  "presenter": "R. Kerrigan, S. Schmoll, T. Wolbrecht",
+                  "stream": 0
+                },
+                {
+                  "title": "Festivals of Classic Shows",
+                  "presenter": "D. Smith",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:30",
+              "end_time": "14:45",
+              "concurrent_streams": [
+                {
+                  "title": "Capture Content for Your Dome Even if You're a N00b with No Money",
+                  "presenter": "T. Wolbrecht",
+                  "stream": 0
+                },
+                {
+                  "title": "Bob and Mark’s (Mostly) Excellent Adventure",
+                  "presenter": "M. Percy",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:45",
+              "end_time": "15:00",
+              "concurrent_streams": [
+                {
+                  "title": "",
+                  "presenter": "",
+                  "stream": 0
+                },
+                {
+                  "title": "Super Cernan Sampler",
+                  "presenter": "K. McCall",
+                  "stream": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "16:00",
+          "end_time": "17:00",
+          "title": "Astronomy Update",
+          "children": [
+            {
+              "start_time": "16:00",
+              "end_time": "17:00",
+              "concurrent_streams": [
+                {
+                  "title": "Astronomy Update",
+                  "presenter": "Dr. Shannon Schmoll",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "18:30",
+          "end_time": "20:30",
+          "title": "Banquet, Awards, and Spitz Lecture",
+          "children": [
+            {
+              "start_time": "18:30",
+              "end_time": "20:30",
+              "concurrent_streams": [
+                {
+                  "title": "Banquet and Awards",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "20:30",
+          "end_time": "21:30",
+          "title": "",
+          "hide": true,
+          "children": [
+            {
+              "start_time": "20:30",
+              "end_time": "21:30",
+              "concurrent_streams": [
+                {
+                  "title": "Spitz Lecture: I Believe",
+                  "presenter": "Gary Tomlinson",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2019-10-26",
+      "events": [
+        {
+          "start_time": "9:30",
+          "end_time": "10:30",
+          "title": "Invited Speaker",
+          "children": [
+          {
+            "start_time": "9:30",
+            "end_time": "10:30",
+            "concurrent_streams": [
+              {
+                "title": "Tomorrow’s Astronomy for Everyone: From Deep Space to the Mountaintops to your Backyard",
+                "presenter": "Dr. Karen S. Bjorkman",
+                "stream": 0
+              }
+            ]
+            }
+          ]
+        },
+        {
+          "start_time": "12:00",
+          "end_time": "13:00",
+          "title": "Business Meeting"
+        },
+        {
+          "start_time": "15:00",
+          "end_time": "16:00",
+          "title": "",
+          "hide": true,
+          "children": [
+            {
+              "start_time": "15:00",
+              "end_time": "16:00",
+              "concurrent_streams": [
+                {
+                  "title": "Storytelling &amp; Adjournment",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
