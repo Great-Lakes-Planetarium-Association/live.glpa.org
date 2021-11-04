@@ -1,144 +1,120 @@
-				<?php include(__DIR__ . '/../private/json.php'); ?>
-				<?php
-					//Get the event data.
-					$eventDays	=	(!isset($eventDays)) ? _vc($state, 'data', 'event_days') : $eventDays;
+<?php
+include '/var/www/includes/glpa2021.php'; // glpa 2021 custom code (to pull in schedule)
+$data = schedule_data_2021(); // returns hashmap with tz (timezone), start_str (starting date used to figure out DST or not and year), schedule_types (not needed for our use), and schedule (decoded JSON object containing the full schedule)
 
-					//Get the active day.
-					$active		=	_vc($state, 'data', 'active');
+date_default_timezone_set('US/'. $data['tz']);
+$start_time = strtotime($data['start_str']);
 
-					//If there are days of events.
-					if (count($eventDays) > 0) {
-						//Get the current year.
-						$activeTimestamp	=	strtotime(_vc($eventDays[$active['day']], 'date'));
-				?>
-					<div id="schedule" class="row">
-						<div class="column small-12 medium-3">
-							<h2>Schedule</h2>
-							<h3>For the year <?php print(date('Y', strtotime($eventDays[0]->date))); ?>:</h3>
-							<ul class="vertical tabs" data-tabs id="schedule-content">
-							<?php foreach($eventDays as $k => $day) { ?>
-								<li class="tabs-title<?php if ($k === $active['day']) { ?> is-active<?php } ?>">
-									<a href="#schedule-<?php print($k); ?>"<?php
-										if ($k === $active['day']) { ?> aria-selected="true"<?php } ?>>
-										<?php print(_vc($day, 'dayString')); ?>
-									</a>
-								</li>
-							<?php } ?>
-							</ul>
-						</div>
-						<div class="column small-12 medium-9">
-							<p class="text-right">
-								It is currently
-								<span class="time" data-timezone="<?php print(_vc($state, 'data', 'timezone')); ?>">
-									<?php
-										//Set the timezone.
-										$timezone	=	_vc($state, 'data', 'timezone');
+// print '<pre>'; print_r($data['schedule']); print '</pre>';
 
-										//Get the date time.
-										include_once(__DIR__ . '/datetime.php');
-									?>
-								</span>
-							</p>
-							<div class="text-right">
-								<small class="asterisk">* Events with asterisks will not be streamed.</small>
-							</div>
-							<div class="tabs-content" data-tabs-content="schedule-content">
-							<?php foreach($eventDays as $k => $day) { ?>
-								<div class="tabs-panel<?php if ($k === $active['day']) { ?> is-active<?php } ?>"
-									id="schedule-<?php print($k); ?>">
-									<div class="table-scroll">
-										<table class="stacked">
-											<colgroup>
-												<col style="width: 40%" />
-												<col style="width: 60%" />
-											</colgroup>
-											<thead>
-												<tr>
-													<th>Time</th>
-													<th>Title</th>
-												</tr>
-											</thead>
-											<tbody>
-								<?php
-									//Get the events.
-									$events	=	_vc($day, 'events');
+$nonstreamed_events = FALSE;
+$schedule_by_day = array();
+foreach ($data['schedule'] as $event) {
+  if (!$event['Live?']) {
+    continue; // skip events which aren't live-streamed
+  }
+  if ($event['Disable?']) {
+    continue; // skip events which are disabled
+  }
+  if (!array_key_exists($event['Date'], $schedule_by_day)) {
+    $schedule_by_day[$event['Date']] = array(); // create empty index for this day, if it doesn't already exist
+  }
+  if (!array_key_exists($event['Start Time'], $schedule_by_day[$event['Date']])) {
+    $schedule_by_day[$event['Date']][$event['Start Time']] = array(); // create empty index for this time, if it doesn't already exist
+  }
+  if ($event['Live?'] == 'nonstreamed') {
+    $nonstreamed_events = TRUE;
+  }
+  // oh this is so gross... need to find a better way to collapse these "parent" items in the schedule if we're going to keep doing things this way
+  if (strpos($event['Event'], 'Paper Session') === 0) {
+    $suffix = substr($event['Event'], -2);
+    if ($suffix == '-A') {
+      // trim off the suffix
+      $event['Event'] = substr($event['Event'], 0, -2);
+    } elseif ($suffix == '-B' || $suffix = '-C') {
+      // skip other rooms
+      continue;
+    }
+  }
+  $schedule_by_day[$event['Date']][$event['Start Time']][] = $event; // add this event to our schedule
+}
 
-									//If there are events.
-									if (count($events) > 0 ) {
-										//For each event on this day.
-										foreach($events as $l => $event) {
-											//Get the timestamps.
-											$tsSrt	=	strtotime(_vc($day, 'date') . _vc($event, 'start_time'));
-											$tsEnd	=	strtotime(_vc($day, 'date') . _vc($event, 'end_time'));
-											$hlght	=	(time() > $tsSrt && time() < $tsEnd) ? true : false;
+// print '<pre>'; print_r($schedule_by_day); print '</pre>';
 
-											//Get the streams.
-											$streams	=	_vc($event, 'children');
+function brandon_date($time) {
+  $out = date('D, M j', $time);
+  $out .= '<sup>';
+  $out .= date('S', $time);
+  $out .= '</sup>';
+  return $out;
+}
 
-											//If there is a title.
-											if (!_vc($event, 'hide')) {
-								?>
-												<tr class="main-event<?php if ($hlght) { ?> highlight<?php } if (!$streams) {
-												?> no-concurrent<?php } ?>">
-													<td>
-														<?php printf("%s - %s", date('h:i A', $tsSrt),
-																date('h:i A', $tsEnd)); ?>
-													</td>
-													<td>
-														<?php print(_vc($event, 'title')); if (!$streams) { ?>*<?php } ?>
-													</td>
-												</tr>
-								<?php
-											}
+function count_child_items($events) {
+  $child_items = 0;
+  foreach ($events as $event) {
+    if ($event['Child item?']) {
+      $child_items++;
+    }
+  }
+  return $child_items;
+}
 
-											//If there are streams.
-											if ($streams && count($streams) > 0) {
-												//For each stream.
-												foreach($streams as $m => $stream) {
-													//Get the timestamps.
-													$tsSrt	=	strtotime(_vc($day, 'date') . _vc($stream, 'start_time'));
-													$tsEnd	=	strtotime(_vc($day, 'date') . _vc($stream, 'end_time'));
-													$hlght	=	(time() > $tsSrt && time() < $tsEnd) ? true : false;
+$now = time(); // ensure that times displayed across the page are consistent
 
-													//Get the concurrent streams.
-													$cStreams	=	_vc($stream, 'concurrent_streams');
+// time for the header...
+// we'll exactly match Brandon's markup for now
+?><div id="schedule" class="row">
+<div class="column small-12 medium-3">
+<h2>Schedule</h2>
+<h3>For the year <?php print date('Y', $start_time); ?>:</h3>
+<ul class="vertical tabs" data-tabs id="schedule-content">
+<?php foreach (array_keys($schedule_by_day) as $day) { ?>
+<li class="tabs-title"><a href="#schedule-<?php print $day; ?>"><?php print brandon_date(strtotime($day)); ?></a></li>
+<?php } ?></div>
+<div class="column small-12 medium-9">
+<p class="text-right">It is currently <span class="time" data-timezone="US/<?php print $data['tz']; ?>"><?php print brandon_date($now) .' '. date('Y g:i A T', $now); ?></span></p>
+<?php if ($nonstreamed_events) { ?>
+<div class="text-right"><small class="asterisk">* Events with asterisks will not be streamed.</small></div>
+<?php }
 
-													//If there are streams.
-													if ($cStreams && count($cStreams) > 0) {
-														//For each stream.
-														foreach($cStreams as $n => $cStream) {
-								?>
-												<tr class="sub-event<?php if ($hlght) { ?> highlight<?php } ?>">
-												<?php if ($n < 1) { ?>
-													<td rowspan="<?php print(count($cStreams)); ?>" class="concurrent">
-														<?php printf("%s - %s", date('h:i A', $tsSrt),
-																date('h:i A', $tsEnd)); ?>
-													</td>
-												<?php } ?>
-													<td>
-														<?php print(_vc($cStream, 'title')); ?>
-														<br />
-													<?php if (_vc($cStream, 'presenter')) { ?>
-														<small>
-															Presented by: <?php print(_vc($cStream, 'presenter')); ?>
-														</small>
-													<?php } ?>
-													</td>
-												</tr>
-								<?php
-														}
-													}
-												}
-											}
-										}
-									}
-								?>
-											</tbody>
-										</table>
-									</div>
-								</div>
-							<?php } ?>
-							</div>
-						</div>
-					</div>
-				<?php } ?>
+// okay that was fun -- now we'll iterate through the days...
+?><div class="tabs-content" data-tabs-content="schedule-content">
+<?php foreach ($schedule_by_day as $daykey => $daytimes) { ?>
+<div class="tabs-panel"	id="schedule-<?php print $daykey; ?>">
+<div class="table-scroll"><table class="stacked"><colgroup><col style="width: 40%" /><col style="width: 60%" /></colgroup>
+<thead><tr><th>Time</th><th>Title</th></tr></thead>
+<tbody>
+<?php foreach ($daytimes as $events) {
+  $concurrent = (count($events) > 1);
+  if ($concurrent) {
+    $child_items = count_child_items($events);
+  } else {
+    $child_items = 1;
+  }
+  $shown_child_item_time = FALSE;
+  foreach ($events as $event) {
+    $classes = ($event['Child item?'] ? 'sub-event' : 'main-event');
+    $classes .= ($concurrent ? '' : ' no-concurrent');
+    $start = strtotime($event['Date'] .' '. $event['Start Time']);
+    $end = strtotime($event['Date'] .' '. $event['End Time']);
+    $highlight = ($time >= $start && $time < $end);
+    $classes .= ($highlight ? ' highlight' : '');
+?><tr class="<?php print $classes; ?>">
+<?php if ($concurrent && $event['Child item?'] && $child_items > 1) {
+if (!$shown_child_item_time) { ?>
+<td rowspan="<?php print $child_items; ?>" class="concurrent"><?php print $event['Start Time'] .' - '. $event['End Time']; ?></td><?php
+  $shown_child_item_time = TRUE;
+}
+} else { ?>
+<td><?php print $event['Start Time'] .' - '. $event['End Time']; ?></td><?php
+} ?>
+<td><?php print $event['Event'] . ($event['Live?'] == 'nonstreamed' ? ' *' : ''); ?></td>
+<?php }
+} ?>
+</tbody>
+</table></div>
+</div>
+<?php } ?>
+</div>
+</div>
+</div>
