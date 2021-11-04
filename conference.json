@@ -1,0 +1,56 @@
+{
+  "conference": "2021 GLPA Conference",
+  "location": "Kalamazoo, MI",
+  "host": "Kalamazoo Valley Museum",
+  "background": "//glpa.org/local/2021conference/planetarium.jpg",
+  "logo": "//glpa.org/local/glpa.png",
+  "timezone": "America/New_York",
+  "google_analytics": "",
+  "announcement": "",
+  "twitter": {
+    "account": "glpasocial",
+    "id": "1186853713127890946",
+    "params": {
+      "dnt": "true",
+      "aria-polite": "assertive"
+    },
+    "hashtag": "#glpa2021"
+  },
+  "facebook": {
+    "account": "glpasocial"
+  },
+  "chat": "",
+  "stream_url_prefixes": {
+    "hls":     "http://live.glpa.org/hls/",
+    "rtmp":    "rtmp://live.glpa.org/",
+    "youtube": "https://www.youtube.com/embed/",
+    "audio":   "http://live.glpa.org:8000/",
+    "ustream": "http://www.ustream.tv/embed/"
+  },
+  "stream_url_suffixes": {
+    "youtube": "?autoplay=1&playsinline=1&rel=0",
+    "ustream": "?html5ui"
+  },
+  "streams": [
+    {
+      "hls":     { "url": "live1.m3u8", "enabled": true },
+      "rtmp":    { "url": "live1/live", "enabled": true },
+      "youtube": { "url": "cTH98PmLfbY", "enabled": true },
+      "audio":   { "url": "live.mp3", "enabled": true },
+      "ustream": { "url": "16165896", "enabled": true }
+    },
+    {
+      "hls":     { "url": "live2.m3u8", "enabled": true },
+      "rtmp":    { "url": "live2/live", "enabled": true },
+      "youtube": { "url": "mSijYxcofFs", "enabled": true },
+      "audio":   { "url": "live2.mp3", "enabled": true }
+    },
+    {
+      "hls":     { "url": "live3.m3u8", "enabled": true },
+      "rtmp":    { "url": "live3/live", "enabled": true },
+      "youtube": { "url": "SI6vksBrguw", "enabled": true },
+      "audio":   { "url": "live3.mp3", "enabled": true }
+    }
+  ],
+  "event_days": [ ]
+}
