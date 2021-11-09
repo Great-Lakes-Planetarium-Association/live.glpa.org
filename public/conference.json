@@ -124,7 +124,7 @@
                 }
               ]
             },
-			{
+            {
               "start_time": "14:30",
               "end_time": "14:45",
               "concurrent_streams": [
@@ -140,7 +140,7 @@
                 }
               ]
             },
-			{
+            {
               "start_time": "14:45",
               "end_time": "15:00",
               "concurrent_streams": [
@@ -153,7 +153,7 @@
             }
           ]
         },
-		{
+        {
           "start_time": "16:00",
           "end_time": "17:00",
           "title": "Invited Speaker",
@@ -311,13 +311,13 @@
                 }
               ]
             },
-			{
+            {
               "start_time": "20:30",
               "end_time": "21:30",
               "concurrent_streams": [
                 {
                   "title": "A Voice in the Dark",
-				  "presenter": "Karrie Berglund",
+                  "presenter": "Karrie Berglund",
                   "stream": 0
                 }
               ]
@@ -358,7 +358,7 @@
               "concurrent_streams": [
                 {
                   "title": "Space Talks: Utilizing Meteorites as Keys to Conversation",
-				  "presenter": "Grant Harkness",
+                  "presenter": "Grant Harkness",
                   "stream": 0
                 }
               ]
