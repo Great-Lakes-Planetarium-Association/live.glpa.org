@@ -70,7 +70,7 @@
 		</header>
 		<section>
 			<section class="row">
-				<main class="column small-12 medium-8">
+				<main class="column">
 				<?php if (_vc($state, 'data', 'announcement')) { ?>
 					<div class="callout alert">
 						<?php print(_vc($state, 'data', 'announcement')); ?>
@@ -283,12 +283,6 @@
 					<hr />
 					<?php include_once(__DIR__ . '/schedule.php'); ?>
 				</main>
-				<aside class="column small-12 medium-4">
-					<div id="twitter-widget">
-					<strong>Share your tweets and pictures!<br />Use the hashtag <a href="https://twitter.com/search?q=<?php print(urlencode(_vc($state, 'data', 'twitter', 'hashtag'))); ?>"><?php print(_vc($state, 'data', 'twitter', 'hashtag')); ?></a>!</strong>
-						<a class="twitter-timeline" data-width="350" data-height="800" data-chrome="noheader nofooter transparent" data-dnt="true" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/<?php print(_vc($state, 'data', 'twitter', 'account')); ?>/timelines/<?php print(_vc($state, 'data', 'twitter', 'id')); ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-					</div>
-				</aside>
 			</section>
 		</section>
 		<footer class="text-center">
