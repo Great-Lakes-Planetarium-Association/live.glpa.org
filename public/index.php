@@ -257,11 +257,6 @@
 									Video
 								</a>
 							</li>
-							<li class="flash">
-								<a href="#video" class="button load-stream">
-									Flash
-								</a>
-							</li>
 							<li class="youtube">
 								<a href="#video" class="button load-stream">
 									Youtube
