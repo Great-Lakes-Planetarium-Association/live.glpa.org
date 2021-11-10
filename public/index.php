@@ -22,6 +22,7 @@
 		<link rel="author" content="GLPA" />
 		<link rel="group" href="humans.txt" />
 		<link rel="stylesheet" href="css/stylesheet.css" />
+        <link rel="shortcut icon" href="//glpa.org/local/glpa.ico" type="image/vnd.microsoft.icon" />
 	<?php if (_vc($state, 'data', 'background')) { ?>
 		<style type="text/css">
 			body {
