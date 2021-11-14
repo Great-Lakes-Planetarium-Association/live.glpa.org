@@ -169,15 +169,6 @@
 					}
 				}
 			}
-    }
-    // Check if we have no active day set. If not, set to either first or last day of the conference
-    if (!($state -> data -> active['day'])) {
-      $now = date('Y-m-d');
-      if ($state -> data -> event_days[0] -> date > $now) {
-        $state -> data -> active['day'] = 0;
-      } else {
-        $state -> data -> active['day'] = count($state -> data -> event_days) - 1;
-      }
-    }
+		}
 	}
 ?>
