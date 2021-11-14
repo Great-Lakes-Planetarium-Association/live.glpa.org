@@ -22,6 +22,7 @@
 		<link rel="author" content="GLPA" />
 		<link rel="group" href="humans.txt" />
 		<link rel="stylesheet" href="css/stylesheet.css" />
+        <link rel="shortcut icon" href="//glpa.org/local/glpa.ico" type="image/vnd.microsoft.icon" />
 	<?php if (_vc($state, 'data', 'background')) { ?>
 		<style type="text/css">
 			body {
@@ -256,11 +257,6 @@
 									Video
 								</a>
 							</li>
-							<li class="flash">
-								<a href="#video" class="button load-stream">
-									Flash
-								</a>
-							</li>
 							<li class="youtube">
 								<a href="#video" class="button load-stream">
 									Youtube
@@ -284,7 +280,7 @@
 				<aside class="column small-12 medium-4">
 					<div id="twitter-widget">
 					<strong>Share your tweets and pictures!<br />Use the hashtag <a href="https://twitter.com/search?q=<?php print(urlencode(_vc($state, 'data', 'twitter', 'hashtag'))); ?>"><?php print(_vc($state, 'data', 'twitter', 'hashtag')); ?></a>!</strong>
-						<a class="twitter-timeline" data-width="350" data-height="800" data-chrome="noheader nofooter transparent" data-dnt="true" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/<?php print(_vc($state, 'data', 'twitter', 'account')); ?>/timelines/<?php print(_vc($state, 'data', 'twitter', 'id')); ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<a class="twitter-timeline" data-width="350" data-height="800" data-chrome="noheader nofooter transparent" data-dnt="true" data-partner="tweetdeck" data-theme="dark" href="https://twitter.com/<?php print(_vc($state, 'data', 'twitter', 'account')); ?>?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 				</aside>
 			</section>

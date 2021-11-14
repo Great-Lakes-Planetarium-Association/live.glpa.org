@@ -1,0 +1,371 @@
+{
+  "conference": "2021 GLPA Conference",
+  "location": "Kalamazoo, MI",
+  "host": "Kalamazoo Valley Museum",
+  "background": "//glpa.org/local/2021conference/planetarium.jpg",
+  "logo": "//glpa.org/local/glpa.png",
+  "timezone": "America/New_York",
+  "google_analytics": "",
+  "announcement": "",
+  "twitter": {
+    "account": "glpasocial",
+    "id": "1186853713127890946",
+    "params": {
+      "dnt": "true",
+      "aria-polite": "assertive"
+    },
+    "hashtag": "#glpa2021"
+  },
+  "facebook": {
+    "account": "glpasocial"
+  },
+  "chat": "",
+  "stream_url_prefixes": {
+    "hls":     "http://live.glpa.org/hls/",
+    "rtmp":    "rtmp://live.glpa.org/",
+    "youtube": "https://www.youtube.com/embed/",
+    "audio":   "http://live.glpa.org:8000/",
+    "ustream": "http://www.ustream.tv/embed/"
+  },
+  "stream_url_suffixes": {
+    "youtube": "?autoplay=1&playsinline=1&rel=0",
+    "ustream": "?html5ui"
+  },
+  "streams": [
+    {
+      "hls":     { "url": "live1.m3u8", "enabled": true },
+      "rtmp":    { "url": "live1/live", "enabled": true },
+      "youtube": { "url": "cTH98PmLfbY", "enabled": true },
+      "audio":   { "url": "live.mp3", "enabled": true },
+      "ustream": { "url": "16165896", "enabled": true }
+    },
+    {
+      "hls":     { "url": "live2.m3u8", "enabled": true },
+      "rtmp":    { "url": "live2/live", "enabled": true },
+      "youtube": { "url": "mSijYxcofFs", "enabled": true },
+      "audio":   { "url": "live2.mp3", "enabled": true }
+    },
+    {
+      "hls":     { "url": "live3.m3u8", "enabled": true },
+      "rtmp":    { "url": "live3/live", "enabled": true },
+      "youtube": { "url": "SI6vksBrguw", "enabled": true },
+      "audio":   { "url": "live3.mp3", "enabled": true }
+    }
+  ],
+  "event_days": [ {
+      "date": "2021-11-11",
+      "events": [
+        {
+          "start_time": "13:30",
+          "end_time": "15:00",
+          "title": "Concurrent Paper Session #1",
+          "children": [
+            {
+              "start_time": "13:30",
+              "end_time": "13:45",
+              "concurrent_streams": [
+                {
+                  "title": "Using AllSky Cameras for Dark Sky Awareness",
+                  "presenter": "Jessica Rogers",
+                  "stream": 0
+                },
+                {
+                  "title": "How to Get the Job: Résumé and Interview Tips",
+                  "presenter": "Dan Tell",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "13:45",
+              "end_time": "14:00",
+              "concurrent_streams": [
+                {
+                  "title": "Creating a Personalized Experience that is Unique to Your Planetarium",
+                  "presenter": "Erin Brady",
+                  "stream": 0
+                },
+                {
+                  "title": "Comparison of Virtual and In-Person Big Astronomy Planetarium Shows: Preliminary Results",
+                  "presenter": "Jesica Trucks, Gloria Lopez, Katie Hinko, Shannon Schmoll",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:00",
+              "end_time": "14:15",
+              "concurrent_streams": [
+                {
+                  "title": "Plein Air Planetarium: Smart Telescopes and Internet for Realtime Astronomy",
+                  "presenter": "Jim Sweitzer",
+                  "stream": 0
+                },
+                {
+                  "title": "Teaching Astronomy with Computational Activities",
+                  "presenter": "Raymond Zich",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:15",
+              "end_time": "14:30",
+              "concurrent_streams": [
+                {
+                  "title": "Lowell's Canals",
+                  "presenter": "Dale Smith",
+                  "stream": 0
+                },
+                {
+                  "title": "Using Active Learning Techniques to Teach Astronomy Online",
+                  "presenter": "Raymond Zich",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:30",
+              "end_time": "14:45",
+              "concurrent_streams": [
+                {
+                  "title": "A Dome within a Dome",
+                  "presenter": "Gary Lazich",
+                  "stream": 0
+                },
+                {
+                  "title": "Starry Messaging: From Galileo to Today",
+                  "presenter": "Bob Bonadurer",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "14:45",
+              "end_time": "15:00",
+              "concurrent_streams": [
+                {
+                  "title": "The Rising Phoenix: A Story of Hope, Inspiration, and Aspiration",
+                  "presenter": "Ken Brand",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "16:00",
+          "end_time": "17:00",
+          "title": "Invited Speaker",
+          "children": [
+            {
+              "start_time": "16:00",
+              "end_time": "17:00",
+              "concurrent_streams": [
+                {
+                  "title": "Culture of Collaboration",
+                  "presenter": "Trice Batson",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2021-11-12",
+      "events": [
+        {
+          "start_time": "09:00",
+          "end_time": "10:30",
+          "title": "Concurrent Paper Session #2",
+          "children": [
+            {
+              "start_time": "09:00",
+              "end_time": "09:15",
+              "concurrent_streams": [
+                {
+                  "title": "Every Student Initiative: Working with School Districts & Donors for Curriculum Related Field Trips",
+                  "presenter": "Renae Kerrigan",
+                  "stream": 0
+                },
+                {
+                  "title": "Live from the Planetarium: The Sequel",
+                  "presenter": "Sara Schultz, Tiffany Stone Wolbrecht, Geoff Holt",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "09:15",
+              "end_time": "09:30",
+              "concurrent_streams": [
+                {
+                  "title": "Two Low Cost 3D Printed Experiment Kits for Studying Physics in Remote Laboratories",
+                  "presenter": "John Potts",
+                  "stream": 0
+                },
+                {
+                  "title": "World Building on Mars",
+                  "presenter": "Shannon Schmoll, Denice Blair, Stacey Fox",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "09:30",
+              "end_time": "09:45",
+              "concurrent_streams": [
+                {
+                  "title": "Building a Teen Intern Program with OpenSpace",
+                  "presenter": "Mike Smail",
+                  "stream": 0
+                },
+                {
+                  "title": "Blending STEM Education and the Dome, Virtually!",
+                  "presenter": "Diana Yoder",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "09:45",
+              "end_time": "10:00",
+              "concurrent_streams": [
+                {
+                  "title": "NEREID: Converge in the Spaces Between",
+                  "presenter": "Tiffany Stone Wolbrech",
+                  "stream": 0
+                },
+                {
+                  "title": "Extraterrestrial Life through a Black Lens",
+                  "presenter": "Jean Creighton",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "10:00",
+              "end_time": "10:15",
+              "concurrent_streams": [
+                {
+                  "title": "Promoting Your Online Content",
+                  "presenter": "Mike Murray",
+                  "stream": 0
+                },
+                {
+                  "title": "Within Reach: Accessibility and Finding Community Through Planetariums",
+                  "presenter": "Melanie Isenbarger",
+                  "stream": 1
+                }
+              ]
+            },
+            {
+              "start_time": "10:15",
+              "end_time": "10:30",
+              "concurrent_streams": [
+                {
+                  "title": "Bringing Living Worlds to Life",
+                  "presenter": "Ryan Wyatt",
+                  "stream": 0
+                },
+                {
+                  "title": "Traveling Through Inner Space in the Planetarium: Evaluating Audience Engagement",
+                  "presenter": "Sally Brummel",
+                  "stream": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "13:15",
+          "end_time": "15:15",
+          "title": "Business Meeting",
+          "children": [
+            {
+              "start_time": "13:15",
+              "end_time": "15:15",
+              "concurrent_streams": [
+                {
+                  "title": "Business Meeting",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "start_time": "18:30",
+          "end_time": "21:30",
+          "title": "Banquet, Awards, and Spitz Lecture",
+          "children": [
+            {
+              "start_time": "18:30",
+              "end_time": "20:30",
+              "concurrent_streams": [
+                {
+                  "title": "Banquet and Awards",
+                  "stream": 0
+                }
+              ]
+            },
+            {
+              "start_time": "20:30",
+              "end_time": "21:30",
+              "concurrent_streams": [
+                {
+                  "title": "A Voice in the Dark",
+                  "presenter": "Karrie Berglund",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2021-11-13",
+      "events": [
+        {
+          "start_time": "9:00",
+          "end_time": "10:00",
+          "title": "Astronomy Update",
+          "children": [
+          {
+            "start_time": "9:00",
+            "end_time": "10:00",
+            "concurrent_streams": [
+              {
+                "title": "Astronomy Update",
+                "presenter": "Dr. Shannon Schmoll",
+                "stream": 0
+              }
+            ]
+            }
+          ]
+        },
+        {
+          "start_time": "12:15",
+          "end_time": "13:15",
+          "title": "Invited Speaker",
+          "children": [
+            {
+              "start_time": "12:15",
+              "end_time": "13:15",
+              "concurrent_streams": [
+                {
+                  "title": "Space Talks: Utilizing Meteorites as Keys to Conversation",
+                  "presenter": "Grant Harkness",
+                  "stream": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
